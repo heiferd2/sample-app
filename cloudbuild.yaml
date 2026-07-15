@@ -18,9 +18,9 @@ steps:
   # Step 4: Apply the production deployment YAML file to the production namespace
   - name: 'gcr.io/cloud-builders/kubectl'
     id: 'Deploy'
-    args: ['-n', 'prod', 'apply', '-f', 'prod/deployment.yaml']
+    args: ['-n', 'prod', 'apply', '-f', 'prod/']
     env:
-    - 'CLOUDSDK_COMPUTE_REGION=<your-zone>'
-    - 'CLOUDSDK_CONTAINER_CLUSTER=hello-cluster'
+    - 'CLOUDSDK_COMPUTE_ZONE=europe-west4-b'
+    - 'CLOUDSDK_CONTAINER_CLUSTER=my-gke-cluster'
 options:
  logging: CLOUD_LOGGING_ONLY
