@@ -17,7 +17,7 @@ steps:
     id: 'Deploy'
     args: ['-n', 'dev', 'apply', '-f', 'dev/']
     env:
-    - 'CLOUDSDK_COMPUTE_REGION=europe-west4'
+    - 'CLOUDSDK_COMPUTE_ZONE=europe-west4-b'
     - 'CLOUDSDK_CONTAINER_CLUSTER=hello-cluster'
 options:
  logging: CLOUD_LOGGING_ONLY
